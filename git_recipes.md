@@ -45,10 +45,43 @@ Switches the branch (or commit) that you're on.
 * branch-name = at first `master` later we'll have others
 ```sh
 git checkout [branch-name]
+git checkout master
+git checkout fix_spacing_bug
+```
+
+### git status
+See what changes are and are not staged.  Also see the current branch and any _actions_ that may be in progress.
+```sh
+git status
+```
 
 ### git add
+Add a file or files to the current _staged_ list.
+* file or path = either a file name or shell wildcard
+* -A = All
+```sh
+git add [file or path]
+git add README.md
+git add views/*
+git add .
+git add -A
+```
 
 ### git commit
-### git log
+Commit the currently _staged_ changes.
+* message = A summary of the changes you are committing.
+```sh
+git commit # will open a text editor to type the message
+git commit -m "[message]"
+git commit -m 'Added birthday to user schema'
+```
 
-### git
+### git log
+Displays the list of commits that are part of the branch.
+* branch-name = at first `master` later we'll have others
+```sh
+git log
+git log --stat # displays the files associated with each entry
+git log [branch-name] # displays commits on a specific branch
+git log master
+```
