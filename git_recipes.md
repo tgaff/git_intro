@@ -1,12 +1,3 @@
-• git status
-• git init
-• git commit
-• git add
-• git checkout branch
-• git remote
-• git clone
-• git log
-
 # working with remotes
 ### adding a remote
 Allows you to use to push and fetch/pull from a foreign repository.
@@ -40,6 +31,9 @@ Turns the current directory into a new git repo.
 git init
 ```
 
+# working with branches
+
+
 ### git checkout
 Switches the branch (or commit) that you're on.
 * branch-name = at first `master` later we'll have others
@@ -49,11 +43,42 @@ git checkout master
 git checkout fix_spacing_bug
 ```
 
+
+### git checkout -b 
+Creates a new branch and switches to it
+* branch-name = at first `master` later we'll have others
+```sh
+git checkout -b [branch-name]
+git checkout -b new_feature
+```
+
+
+### git branch  
+Shows your local branches and which one you're on.
+```sh
+git branch
+git branch -r # show remote branches
+```
+
+
+### git branch [branch-name]  
+Creates a new branch.
+* branch-name = a name for the new branch
+```sh
+git branch -b [branch-name]
+git branch my_new_feature
+```
+Usually followed by a `git checkout [branch-name]`.  See also `git checkout -b`.
+
+
+# working with commits
+
 ### git status
 See what changes are and are not staged.  Also see the current branch and any _actions_ that may be in progress.
 ```sh
 git status
 ```
+
 
 ### git add
 Add a file or files to the current _staged_ list.
